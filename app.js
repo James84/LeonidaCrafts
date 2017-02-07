@@ -12,9 +12,19 @@ app.use(express.static('public'));
 app.engine('.hbs', expressHandleBars({
     defaultLayout: 'main',
     extname: '.hbs',
-    layoutDir: path.join(__dirname, 'views/layouts')
+    layoutDir: path.join(__dirname, 'views/layouts'),
+    helpers: {
+     // set up sections
+      section: function(name, options){
+        if(!this._sections){
+          this._sections = {};
+        }
+        this._sections[name] = options.fn(this);
+        return null;
+      }
+    }
 }));
- 
+  
 app.set('view engine', '.hbs');
 app.set('views', path.join(__dirname, 'views'));
 

@@ -65,5 +65,9 @@
   "github:jspm/nodelibs-util@0.1.0": {
     "util": "npm:util@^0.10.3"
   },
-  "github:jspm/nodelibs-child_process@0.1.0": {}
+  "github:jspm/nodelibs-child_process@0.1.0": {},
+  "github:twbs/bootstrap@3.3.7": {
+    "jquery": "jspm:jquery"
+  },
+  "npm:jquery@3.1.1": {}
 }

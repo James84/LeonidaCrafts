@@ -16,9 +16,6 @@ gulp.task("start_node", function(){
     
   stream.on('restart', function(){
     console.log('restart'); 
-      gulp.src('public/sass/**/*.scss')
-      .pipe(sass().on('error', sass.logError))
-      .pipe(gulp.dest('public/css/'));  
   })      
   .on('crash', function() {
     console.error('Application has crashed!\n')
