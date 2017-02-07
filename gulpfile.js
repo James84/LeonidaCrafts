@@ -7,9 +7,7 @@ gulp.task('default', function(){
 });
 
 // start node server
-gulp.task('start', ['start_node', 'sass']);
-
-gulp.task("start_node", function(){
+gulp.task("start", ['watch'], function(){
   var stream = nodemon({
       script: 'app.js',      
   }); 
@@ -21,6 +19,11 @@ gulp.task("start_node", function(){
     console.error('Application has crashed!\n')
       stream.emit('restart', 10)  // restart the server in 10 seconds 
   });
+});
+
+gulp.task('watch', function(){
+    //watch for changes in sass files and recompile
+    return gulp.watch('public/sass/**/*.scss', ['sass']);
 });
 
 gulp.task('sass', function(){
