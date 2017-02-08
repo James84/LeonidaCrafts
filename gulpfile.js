@@ -1,9 +1,9 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var nodemon = require('nodemon')
+var imagemin = require('gulp-imagemin');
 
 gulp.task('default', function(){
-
 });
 
 // start node server
@@ -23,11 +23,17 @@ gulp.task("start", ['watch'], function(){
 
 gulp.task('watch', function(){
     //watch for changes in sass files and recompile
-    return gulp.watch('public/sass/**/*.scss', ['sass']);
+    return gulp.watch('public/sass/**/*.scss', ['sass', 'imagemin']);
 });
 
 gulp.task('sass', function(){
     gulp.src('public/sass/**/*.scss')
       .pipe(sass().on('error', sass.logError))
       .pipe(gulp.dest('public/css/'));   
+});
+
+gulp.task('imagemin', function(){
+    gulp.src('public/images/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('dist/images'))
 });
