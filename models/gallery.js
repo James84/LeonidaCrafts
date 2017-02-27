@@ -11,18 +11,18 @@ var myStorage = new keystone.Storage({
 
 var Gallery = new keystone.List('Gallery', {
 	autokey: { from: 'name', path: 'key', unique: true },
-	plural: 'Albums',
-	singular: 'Album',
+	plural: 'Images',
+	singular: 'Image',
 });
 
 
 Gallery.add({
 	name: { type: String, required: true },
 	publishedDate: { type: Types.Date, default: Date.now },
-	images: { type: Types.File, storage: myStorage },
+	path: { type: Types.File, storage: myStorage },
 });
 
 Gallery.track = true;
 Gallery.defaultSort = 'publishedDate';
-Gallery.defaultColumns = 'name, publishedDate';
+Gallery.defaultColumns = 'name, publishedDate, image';
 Gallery.register(); 

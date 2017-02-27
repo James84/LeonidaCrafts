@@ -1,3 +1,5 @@
+// set up routing and initialise middleware
+
 var keystone = require('keystone'),
     middleware = require('./middleware'),
     importRoutes = keystone.importer(__dirname);
@@ -29,7 +31,6 @@ var routes = {
 
 // Bind Routes
 exports = module.exports = function(app) {
-    
     app.get('/', routes.views.index);
     app.get('/gallery', routes.views.gallery);
 }

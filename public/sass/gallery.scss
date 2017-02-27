@@ -1,4 +1,12 @@
 .image-container{
-    border: solid black 1px;
+    //border: solid black 1px;
     height: 20em;
+    padding: 0;
+    margin: 1em;
+}
+
+.image-container img{
+    height: inherit;
+    width: auto;
+    overflow: hidden;
 }
