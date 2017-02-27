@@ -8,7 +8,7 @@ exports = module.exports = function(next){
             first: 'Admin',
             last: 'User'
         },
-        email: 'admin@keystonejs',
+        email: 'admin@keystonejs.com',
         passwword: 'admin',
         canAccessKeystone: true
     }).save(next);
