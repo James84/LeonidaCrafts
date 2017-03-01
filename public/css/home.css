@@ -16,5 +16,10 @@ body {
 
 .jewellery-link-container a,
 .jewellery-link-container a:hover {
-  text-decoration: none;
+  text-decoration: none; }
+
+.jewellery-link-container a {
   color: #fff; }
+
+.jewellery-link-container a:hover {
+  color: purple; }

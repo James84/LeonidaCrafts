@@ -6,7 +6,9 @@
     <div class="row">
         {{#each images}}
             <div class="col-md-4 image-container"> 
+                <h2>{{name}}</h2>
                 <img src="/images/{{path.filename}}" alt="gallery image"/>
             </div>
         {{/each}}
+    </div>
 </div>
