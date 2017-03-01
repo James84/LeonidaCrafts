@@ -1,5 +1,20 @@
 body {
   height: 100%;
   width: 100%;
-  background: url("/images/landscape_25pc.jpg") no-repeat center;
+  background: url("/images/homepage_compressed.jpeg") no-repeat center;
   background-size: cover; }
+
+.title-container {
+  margin-top: 10%;
+  padding: 28px 0; }
+
+.title-container h1 {
+  color: #fff; }
+
+.jewellery-link-container {
+  margin-top: 40%; }
+
+.jewellery-link-container a,
+.jewellery-link-container a:hover {
+  text-decoration: none;
+  color: #fff; }

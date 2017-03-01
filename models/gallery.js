@@ -25,4 +25,4 @@ Gallery.add({
 Gallery.track = true;
 Gallery.defaultSort = 'publishedDate';
 Gallery.defaultColumns = 'name, publishedDate, image';
-Gallery.register(); 
+Gallery.register();

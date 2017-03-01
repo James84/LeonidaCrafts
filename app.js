@@ -3,7 +3,7 @@ var expressHandleBars = require('express-handlebars');
 var keystone = require('keystone');
 
 keystone.init({
-    'name': 'LeonidaCrafts',
+    'name': 'EnchantedTeardrops',
     
     'scss': 'public',
     'static': 'public',
@@ -29,7 +29,7 @@ keystone.init({
     'view engine': 'handlebars',
     
     'auto update': true,
-    'mongo': 'mongodb://localhost/leonida-crafts',
+    'mongo': 'mongodb://localhost/enchanted-teardrops',
   
     'session': true,
     'auth': true,
