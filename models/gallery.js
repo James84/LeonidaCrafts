@@ -1,6 +1,8 @@
 var keystone = require('keystone');
 var Types = keystone.Field.Types;
 
+// adapter for local file storage
+// this will need to be changed for production
 var myStorage = new keystone.Storage({
     adapter: keystone.Storage.Adapters.FS,
     fs: {
